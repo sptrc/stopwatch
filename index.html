@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Stopwatch</title>
+	<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body ng-app="stopwatchApp">
+	<div class="container mt-4">
+		<div class="jumbotron" ng-controller="stopwatchCon">
+			<h1>Stopwatch Application</h1>
+			<hr class="my-4">
+			<button class="btn btn-primary" ng-click="start()"><i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;Start</button>
+			<button class="btn btn-outline-primary" ng-click="stop()"><i class="fa fa-pause" aria-hidden="true"></i>&nbsp;&nbsp; Stop</button>
+			<button class="btn btn-primary" ng-click="reset()"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;&nbsp; Reset</button>
+
+			<h1 class="display-1 text-center my-6">{{h | leadZ}}:{{m | leadZ}}:{{s | leadZ}}.<small>{{sx | leadZ}}</small></h1>
+		</div>
+	</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="script.js"></script>
+</html>
